@@ -3,19 +3,25 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Aplicativo em fase de teste</title>
-		<style>
-			body { margin: 0; }
-			canvas { display: block; }
-		</style>
+		<link href="style.css" rel="stylesheet">
 	</head>
 	<body>
 
+		<!--
+			Apresentar a extensão Live Server
+		-->
+
+		<div class="menu"><header>Menu</header></div>
 		<div id="viewport"></div>
-		<script src="tools/three.js">
+		<script src="./tools/three.js">
 		// Inclui a biblioteca gráfica ThreeJS
 		</script>
+		<script src="./tools/GLTFLoader.js" type="module">
+		// Inclui a biblioteca para carregar GLTF
+		</script>
+		<script src="./tools/OrbitControls.js" type="module"></script>
 
-		<script src="app.js">
+		<script src="app.r2.js" type="module">
 		// Inclui arquivo com a aplicação
 		</script>
 

@@ -57,3 +57,12 @@ function animate() {
 
 // executa a função
 animate();
+
+// atualiza o tamanho da página em tempo real
+window.addEventListener('resize', onResize);
+
+function onResize() {
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+}
