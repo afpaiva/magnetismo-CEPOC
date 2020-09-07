@@ -1,9 +1,8 @@
 body {
   margin: 0;
+  overflow: hidden;
 }
-canvas { 
-  display: block;
-}
+
 .menu{
   position: fixed;
   background-color: chocolate;
@@ -14,5 +13,5 @@ canvas {
   border-radius: 10px;
 }
 #viewport{
-  background-color: darkgray;
+  background-color: rgb(10, 39, 39);
 }
