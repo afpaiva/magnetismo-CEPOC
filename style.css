@@ -13,5 +13,5 @@ body {
   border-radius: 10px;
 }
 #viewport{
-  background-color: rgb(10, 39, 39);
+  background-image: radial-gradient(#919191, #3f3f3f);
 }
