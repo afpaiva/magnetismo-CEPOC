@@ -8,6 +8,7 @@ Trabalho de representação interativa e tridimensional da regra da mão esquerd
 Autores:
 - André Fonseca de Paiva
 - Angelica dos Santos
+- Fernando Thales Pereira
 - João Victor Zanolli Crespo
 - Raissa de Alcântara Bernardes Bezerra
 - Thiago Junio Saraiva
