@@ -16,3 +16,19 @@ Autores:
 Orientadores:
 - Fabiano Costa Teixeira
 - João Carlos de Moraes Morselli Junior
+
+------------
+
+## Pastas
+
+Organização das pastas:
+
+- assets\3d\ [ modelos 3D ]
+- assets\icons\ [ ícones e botões ]
+- assets\images\ [ imagens ]
+- tools\ [ bibliotecas ]
+
+raiz:
+[ index.html ]
+[ app.js - arquivo principal da aplicação ]
+[ style.css - estilos]
