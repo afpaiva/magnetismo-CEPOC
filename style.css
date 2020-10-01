@@ -3,15 +3,14 @@ body {
   overflow: hidden;
 }
 
-.menu{
-  position: fixed;
-  background-color: chocolate;
-  width: 100%;
-  height: 30px;
-  padding: 5px;
-  margin: 10px;
-  border-radius: 10px;
-}
+
 #viewport{
   background-image: radial-gradient(#919191, #3f3f3f);
+}
+
+.teste{
+  position: fixed;
+  background-color: deeppink;
+  width: 100vw;
+  height: 50px;
 }

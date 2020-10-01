@@ -1,66 +1,57 @@
-// cria a variável onde será incluida a Cena
-var scene = new THREE.Scene();
-// cria uma camera para possibilitar a visualização
-// do modelo tridimensional
-var camera = new THREE.PerspectiveCamera(
-  75, // ângulo de visão (fov = field of view)
-  window.innerWidth / window.innerHeight,// aspect da câmera
-  // neste caso será o tamanho da janela atual do navegador
-  0.1, // primeiro clipping da camera (posso explicar depois)
-  1000 // último clipping da camera (também :P)
-  );
+import { GLTFLoader } from './tools/GLTFLoader.js';
+import { OrbitControls } from './tools/OrbitControls.js';
 
-// ok! Acima temos uma uma cena e uma camera configurados!
+const renderer = new THREE.WebGLRenderer({
+  antialias:true,
+  alpha: true
+});
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.querySelector("#viewport").appendChild(renderer.domElement);
 
-// abaixo, preparamos o renderizador
-var renderer = new THREE.WebGLRenderer();
-// define o tamanho do renderizador para o tamanho da janela
-renderer.setSize( window.innerWidth, window.innerHeight );
-// busca lá no html a div com ID = viewport
-var viewport = document.querySelector("#viewport");
-// e coloca na div o renderizador
-viewport.appendChild( renderer.domElement );
+const scene = new THREE.Scene();
 
-// agora vamos inserir a geometria
-// entende-se por geometria, o modelo tridimensional
-var geometry = new THREE.BoxGeometry();
-// também o material, que seria a textura, no caso a cor 00ff00
-var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-// e é aplicado à geometria o seu material
-var cube = new THREE.Mesh( geometry, material );
-// adiciona à variável "scene" criada lá em cima o nosso cube
-scene.add( cube );
+const ambientLight = new THREE.AmbientLight (0x404040,5);
+scene.add(ambientLight);
+const directLight = new THREE.DirectionalLight( 0xffffff, 0.5 );
+directLight.position.set(.2,.1,0);
+scene.add(directLight);
 
-// posiciona a camera na altura 5, lembra do Will? (0,0,5);
-camera.position.z = 5;
+const camera = new THREE.PerspectiveCamera(75,
+  window.innerWidth/window.innerHeight,
+  0.1,
+  1000);
 
-// a função abaixo vai animar o cubo
-function animate() {
+const controls = new OrbitControls (camera, renderer.domElement);
+camera.position.set (0,0,8);
 
-  // a função abaixo é do JavaScript, ela pede para o navegador
-  // para performar uma animação, quando chamada uma função.
-  // reparem a recursividade, pois chama "animate" dentro dela mesma.
-  // (me parece que é recursiva..)
-  requestAnimationFrame( animate );
+var mixer, magnetField;
+const loader = new GLTFLoader();
+loader.load('./assets/modelo.glb',
+  function (gltf){
+    var magnets = gltf.scene.children[0];
+    magnetField = gltf.scene.children[1];
+    scene.add(magnets);
+    scene.add(magnetField);
 
-  // soma à rotação... e lá vem o Will de novo.. rsrs...
-  // incrementa 0.01 (float) na rotação em x, e em y ao mesmo tempo.
-  cube.rotation.x += 0.01;
-  cube.rotation.y += 0.01;
+    mixer = new THREE.AnimationMixer(magnetField);
+    var action = mixer.clipAction(gltf.animations[0]);
+    action.play();
+  }),
+  undefined,
+  function(error){
+    console.error(error);
+  }
 
-  // a função render está dentro do objeto renderer, pois foi criada a
-  // partir de uma classe (isso é orientação ao objeto, vamos ver ainda)
-  // por isso do ponto depois do nome da variável.
-  // assim a gente renderiza a cena e a camera.
-	renderer.render( scene, camera );
+var clock = new THREE.Clock();
+renderer.setAnimationLoop(render);
+requestAnimationFrame(render);
+  
+function render() {
+  renderer.render(scene, camera);
+  if (mixer) mixer.update(clock.getDelta());
 }
 
-// executa a função
-animate();
-
-// atualiza o tamanho da página em tempo real
 window.addEventListener('resize', onResize);
-
 function onResize() {
   renderer.setSize(window.innerWidth, window.innerHeight);
   camera.aspect = window.innerWidth / window.innerHeight;
