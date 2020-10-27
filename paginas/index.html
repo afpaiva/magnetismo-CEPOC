@@ -1,0 +1,55 @@
+<html lang="pt-br">
+<head>
+	<!--isso é pro design responsivo-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--nome e icone que fica na aba da pagina-->
+	<title> Força Magnética </title>
+
+	<!--pasta css-->
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<!--fav icon-->
+	<link rel="favicon" href="demo_icon.gif" type="gif" sizes="16x16">
+	<link rel="icon" href="favicon.ico">
+
+	<!--fontes-->
+
+	<!--icons-->
+
+	<!--palavra-chave para rankear o site-->
+	<meta name="keywords" content="magnetismo">
+    <meta name="author" content="nominhos">
+    <meta name="description" content="Força Magnética">
+</head>
+
+<body class="conteudo">
+	<div class="menu">
+		<input type="checkbox" id="checkbox-menu" onclick="openNav()">
+		<label for="checkbox-menu">
+			<span></span>
+			<span></span>
+			<span></span>
+		</label>
+		<div id="barra-navegacao" class="overlay">
+		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		  <div class="overlay-content">
+		    <a href="javascript:void(0)" onclick="">Fórmulas</a>
+		    <a href="javascript:void(0)" onclick="">Provas</a>
+		    <a href="javascript:void(0)" onclick="">Ajuda</a>
+		    <a href="javascript:void(0)" onclick="">Sobre</a>
+		  </div>
+		</div>
+	</div>
+</body>
+
+<script>
+	function openNav() {
+	  	document.getElementById("barra-navegacao").style.width = "30%";
+	}
+
+	function closeNav() {
+		document.getElementById("barra-navegacao").style.width = "0%";
+	}
+</script>
