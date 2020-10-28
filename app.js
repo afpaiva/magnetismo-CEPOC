@@ -38,7 +38,8 @@ camera.position.set (0,0,8);
 // magnetField = objeto animado  -> campo magnético
 // magnets     = objeto estático -> imãs
 var mixer, play;
-var magnets, magnetField, hand, vector;
+var group;
+var magnets, magnetField, hand, vector, vF, vB, vV;
 const loader = new GLTFLoader();
 loader.load('./assets/modelo.glb',
   function (gltf){
@@ -46,9 +47,24 @@ loader.load('./assets/modelo.glb',
     magnetField = gltf.scene.children[1];
     hand = gltf.scene.children[2];
     vector = gltf.scene.children[3];
+    vF = gltf.scene.children[4];
+    vB = gltf.scene.children[5];
+    vV = gltf.scene.children[6];
+    group = new THREE.Group();
+    group.add(vector);
+    group.add(vF);
+    group.add(vB);
+    group.add(vV);
+    group.add(hand);
     scene.add(magnets);
     scene.add(magnetField);
-    scene.add(hand);
+    scene.add(group);
+
+    group.children[0].visible = false;
+    group.children[1].visible = false;
+    group.children[2].visible = false;
+    group.children[3].visible = false;
+    group.children[4].visible = true;
 
     mixer = new THREE.AnimationMixer(magnetField);
     play = true;
@@ -90,7 +106,7 @@ document.querySelector(".botao2").addEventListener('click', onClickRotate);
 var a = 1.5708; // rotaciona em 90graus - valor em radiano
 function onClickRotate(){
   console.log (hand.rotation.x);
-  TweenLite.to(hand.rotation, .5 , { x: a });
+  TweenLite.to(group.rotation, .5 , { x: a });
   a+=1.5708;
 }
 // *****
@@ -98,22 +114,31 @@ var b = 0;
 document.querySelector(".botao3").addEventListener('click', onClickOpacity);
 function onClickOpacity(){
   switch (b){
+    case 0:
+      group.children[0].visible = true;
+      group.children[1].visible = true;
+      group.children[2].visible = true;
+      group.children[3].visible = true;
+      group.children[4].visible = true;
+      break;
+
     case 1:
-      hand.visible = true;
-      vector.visible = true;
+      group.children[0].visible = true;
+      group.children[1].visible = true;
+      group.children[2].visible = true;
+      group.children[3].visible = true;
+      group.children[4].visible = false;
       break;
-
+      
     case 2:
-      hand.visible = false;
-      vector.visible = true;
-      break;
-
-    case 3:
-      hand.visible = false;
-      vector.visible = true;
+      group.children[0].visible = false;
+      group.children[1].visible = false;
+      group.children[2].visible = false;
+      group.children[3].visible = false;
+      group.children[4].visible = true;
       break;
   }
-  b == 2 ? b = 0 : b++;
   console.log(b);
+  b == 2 ? b = 0 : b++;
 }
 // *****
