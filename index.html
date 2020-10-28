@@ -9,19 +9,21 @@
 	</head>
 	<body>
 
-		<!--
-			Apresentar a extensão Live Server
-		-->
-
-		<div class="teste">Modelo de teste 3D<br>MAGNETISMO</div>
+		<div class="controllers-menu">
+			<div class="botao1">pausa</div>
+			<div class="botao2">gira</div>
+		</div>
 		
 		<div id="viewport"></div>
+
 		<script src="./tools/three.js">
 		// Inclui a biblioteca gráfica ThreeJS
 		</script>
+
 		<script src="./tools/GLTFLoader.js" type="module">
 		// Inclui a biblioteca para carregar GLTF
 		</script>
+
 		<script src="./tools/OrbitControls.js" type="module"></script>
 
 		<script src="app.js" type="module">

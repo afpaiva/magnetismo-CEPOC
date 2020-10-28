@@ -36,18 +36,20 @@ camera.position.set (0,0,8);
 // mixer = instância de animação
 // magnetField = objeto animado  -> campo magnético
 // magnets     = objeto estático -> imãs
-var mixer;
+var mixer, play;
+var magnets, magnetField, hand;
 const loader = new GLTFLoader();
 loader.load('./assets/modelo.glb',
   function (gltf){
-    var magnets = gltf.scene.children[0];
-    var magnetField = gltf.scene.children[1];
-    var hand = gltf.scene.children[2];
+    magnets = gltf.scene.children[0];
+    magnetField = gltf.scene.children[1];
+    hand = gltf.scene.children[2];
     scene.add(magnets);
     scene.add(magnetField);
     scene.add(hand);
 
     mixer = new THREE.AnimationMixer(magnetField);
+    play = true;
     var action = mixer.clipAction(gltf.animations[0]);
     action.play();
   }),
@@ -64,7 +66,7 @@ requestAnimationFrame(render);
 
 function render() {
   renderer.render(scene, camera);
-  if (mixer) mixer.update(clock.getDelta());
+  if (play) mixer.update(clock.getDelta());
 }
 
 // listeners: ajuste conforme tamanho da janela do navegador
@@ -73,5 +75,18 @@ function onResize() {
   renderer.setSize(window.innerWidth, window.innerHeight);
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
+}
+// *****
+
+// listeners: cliques e alterações de inputs
+document.querySelector(".botao1").addEventListener('click', onClickPauseAnim);
+function onClickPauseAnim(){
+  if (play) play = false;
+  else if (!play) play = true;
+}
+document.querySelector(".botao2").addEventListener('click', onClickRotate);
+function onClickRotate(){
+  console.log (hand.rotation);
+  hand.rotation.x++;
 }
 // *****
