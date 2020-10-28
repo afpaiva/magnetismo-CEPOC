@@ -1,16 +1,41 @@
 body {
   margin: 0;
   overflow: hidden;
+  font-family: 'Roboto', sans-serif;
 }
 
 
 #viewport{
-  background-image: radial-gradient(#919191, #3f3f3f);
+  background-color: #f7f7f7;
 }
 
-.teste{
+.controllers-menu{
   position: fixed;
-  background-color: deeppink;
+  display: flex;
+  color: white;
+  justify-content: center;
+  background-color: rgb(216, 216, 216);
   width: 100vw;
   height: 50px;
+}
+
+.botao1, .botao2, .botao3{
+  position: relative;
+  padding: 5px;
+  margin: 3px;
+  width: 100px;
+  height: 20px;
+  cursor: pointer;
+}
+.botao1:hover, .botao2:hover , .botao3:hover  {
+  opacity: 0.5;
+}
+.botao1{
+  background-color: rgb(86, 110, 47);
+}
+.botao2{
+  background-color: rgb(53, 92, 79);
+}
+.botao3{
+  background-color: rgb(60, 69, 122);
 }
