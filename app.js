@@ -1,5 +1,6 @@
 import { GLTFLoader } from './tools/GLTFLoader.js';
 import { OrbitControls } from './tools/OrbitControls.js';
+import { MeshLambertMaterial } from './tools/three.module.js';
 
 // carrega o renderizador
 const renderer = new THREE.WebGLRenderer({
@@ -85,8 +86,16 @@ function onClickPauseAnim(){
   else if (!play) play = true;
 }
 document.querySelector(".botao2").addEventListener('click', onClickRotate);
+var a = 1.5708; // rotaciona em 90graus - valor em radiano
 function onClickRotate(){
-  console.log (hand.rotation);
-  hand.rotation.x++;
+  console.log (hand.rotation.x);
+  TweenLite.to(hand.rotation, .5 , { x: a });
+  a+=1.5708;
+}
+// *****
+document.querySelector(".botao3").addEventListener('click', onClickOpacity);
+function onClickOpacity(){
+  console.log(hand);
+  hand.visible = true;
 }
 // *****

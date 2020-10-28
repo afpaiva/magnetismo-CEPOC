@@ -11,25 +11,31 @@ body {
 
 .controllers-menu{
   position: fixed;
-  color: white;
   display: flex;
+  color: white;
   justify-content: center;
-  background-color: rgb(102, 0, 0);
+  background-color: rgb(216, 216, 216);
   width: 100vw;
   height: 50px;
 }
 
-.botao1{
+.botao1, .botao2, .botao3{
   position: relative;
-  width: 50px;
-  height: 50px;
-  background-color: green;
+  padding: 5px;
+  margin: 3px;
+  width: 100px;
+  height: 20px;
   cursor: pointer;
 }
+.botao1:hover, .botao2:hover , .botao3:hover  {
+  opacity: 0.5;
+}
+.botao1{
+  background-color: rgb(86, 110, 47);
+}
 .botao2{
-  position: relative;
-  width: 50px;
-  height: 50px;
-  background-color: rgb(214, 200, 7);
-  cursor: pointer;
+  background-color: rgb(53, 92, 79);
+}
+.botao3{
+  background-color: rgb(60, 69, 122);
 }
