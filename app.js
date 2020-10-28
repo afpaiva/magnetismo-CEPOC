@@ -120,6 +120,7 @@ function onClickOpacity(){
       group.children[2].visible = true;
       group.children[3].visible = true;
       group.children[4].visible = true;
+      document.querySelector(".botao3").innerHTML = "vetor + mão";
       break;
 
     case 1:
@@ -128,6 +129,7 @@ function onClickOpacity(){
       group.children[2].visible = true;
       group.children[3].visible = true;
       group.children[4].visible = false;
+      document.querySelector(".botao3").innerHTML = "vetor";
       break;
       
     case 2:
@@ -136,6 +138,7 @@ function onClickOpacity(){
       group.children[2].visible = false;
       group.children[3].visible = false;
       group.children[4].visible = true;
+      document.querySelector(".botao3").innerHTML = "mão";
       break;
   }
   console.log(b);
