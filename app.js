@@ -38,13 +38,14 @@ camera.position.set (0,0,8);
 // magnetField = objeto animado  -> campo magnético
 // magnets     = objeto estático -> imãs
 var mixer, play;
-var magnets, magnetField, hand;
+var magnets, magnetField, hand, vector;
 const loader = new GLTFLoader();
 loader.load('./assets/modelo.glb',
   function (gltf){
     magnets = gltf.scene.children[0];
     magnetField = gltf.scene.children[1];
     hand = gltf.scene.children[2];
+    vector = gltf.scene.children[3];
     scene.add(magnets);
     scene.add(magnetField);
     scene.add(hand);
@@ -93,9 +94,26 @@ function onClickRotate(){
   a+=1.5708;
 }
 // *****
+var b = 0;
 document.querySelector(".botao3").addEventListener('click', onClickOpacity);
 function onClickOpacity(){
-  console.log(hand);
-  hand.visible = true;
+  switch (b){
+    case 1:
+      hand.visible = true;
+      vector.visible = true;
+      break;
+
+    case 2:
+      hand.visible = false;
+      vector.visible = true;
+      break;
+
+    case 3:
+      hand.visible = false;
+      vector.visible = true;
+      break;
+  }
+  b == 2 ? b = 0 : b++;
+  console.log(b);
 }
 // *****
