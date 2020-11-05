@@ -1,22 +1,57 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Aplicativo em fase de teste</title>
-		<link href="style.css" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,900;1,300;1,900&display=swap" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+	<title>Aplicativo em fase de teste</title>
+		
+	<link href="style.css" rel="stylesheet">
+		
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,900;1,300;1,900&display=swap" rel="stylesheet">
+		
+	<meta property="og:url" content="https://codepen.io/hrtzt/details/NPZKRN">
+		
+	<meta property="og:image" content="https://pbs.twimg.com/media/CCNJN_XUMAAJSzU.jpg:large">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+	<script src="https://kit.fontawesome.com/c8fd1cfcb7.js" crossorigin="anonymous"></script>
+	
+	<link rel="stylesheet" href="./style.css">
+	
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,900;1,300;1,900&display=swap" rel="stylesheet">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
 	</head>
 	<body>
-
-		<div class="controllers-menu">
-			<div class="botao1">pausa</div>
-			<div class="botao2">gira</div>
-			<div class="botao3">mão</div>
-		</div>
+	
+	<div class="ct" id="t1">
+  <div class="ct" id="t2">
+    <div class="ct" id="t3">
+      <div class="ct" id="t4">
+         <div class="ct" id="t5">
+          <ul id="menu">
+            
+			<a href="#t1"><li class="icon fa fa-home" id="uno"></li></a>
+            <a href="#t2"><li class="icon fa fa-square-root-alt" id="dos"></li></a>
+            <a href="#t3"><li class="icon fa fa-file-alt" id="tres"></li></a>
+            <a href="#t4"><li class="icon fa fa-question" id="cuatro"></li></a>
+            <a href="#t5"><li class="icon fa fa-info" id="cinco"></li></a>
+         </ul>
+			 
+			 
+        <div class="page" id="p1">
+			 
+					<div class="controllers-menu">
+					<div class="botao1"><i class="far fa-pause-circle"></i> Pausar</div>
+					<div class="botao2"><i class="fas fa-sync-alt"></i> Girar</div>
+					<div class="botao3"><i class="far fa-hand-pointer"></i> Mão</div>
+					
+				</div>
 		
 		<div id="viewport"></div>
-
 		<script src="./tools/three.js">
 		// Inclui a biblioteca gráfica ThreeJS
 		</script>
@@ -34,6 +69,44 @@
 		<script src="tools/gsap.min.js">
 		// Inclui API para criação de interpolação de valores
 		</script>
+
+          </div>
+			 
+          <div class="page" id="p2">
+            <section class="icon fa fa-square-root-alt"><span class="title">Fórmulas</span>
+			
+				<p class="hint">Inserir lista de formulas e dicas sobre a matéria</p>
+				
+			</section>
+          </div>  
+				
+          <div class="page" id="p3">
+            <section class="icon fa fa-rocket"><span class="title">Provas</span></section>
+          </div>
+				
+          <div class="page" id="p4">
+            <section class="icon fa fa-question">
+              <span class="title">Ajuda</span>
+              <p class="hint">Inserir texto de ajuda ao usuário</a>
+              </p>
+      
+            </section>
+          </div> 
+          <div class="page" id="p5">
+            
+			<section class="icon fa fa-info">
+              <span class="title">Sobre</span>
+
+                <p class="hint">Trabalho de representação interativa e tridimensional da regra da mão esquerda em forças magnéticas sobre cargas desenvolvido pelos alunos André Fonseca de Paiva, Angelica dos Santos, Fernando Thales Pereira, João Victor Zanolli Crespo, Raissa de Alcântara Bernardes Bezerra, Thiago Junio Saraiva sob a orientação dos professores Fabiano Costa Teixeira e João Carlos de Moraes Morselli Junior</p>
+</span><br/>
+               
+            </section>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 	</body>
 </html>
