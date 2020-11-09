@@ -7,6 +7,8 @@ body {
 
 #viewport{
   position: fixed;
+  width: 100%;
+  height: 100%;
   top: 0px;
 }
 
@@ -50,10 +52,9 @@ html, body, .page {
 }
 
 .page {
-  position: absolute;
+  position: fixed;
   margin: auto;
   padding-bottom: 500px;
-  
 }
 
 #p1 {
