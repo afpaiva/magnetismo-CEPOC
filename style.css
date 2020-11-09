@@ -6,11 +6,13 @@ body {
 
 
 #viewport{
-
+  position: fixed;
+  top: 0px;
 }
 
 .controllers-menu{
   position: relative;
+  z-index: 2;
   display: flex;
   color: white;
   justify-content: center;
@@ -48,7 +50,7 @@ html, body, .page {
 }
 
 .page {
-  position: fixed;
+  position: absolute;
   margin: auto;
   padding-bottom: 500px;
   

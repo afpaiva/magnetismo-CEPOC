@@ -3,6 +3,8 @@
 
 Trabalho de representação interativa e tridimensional da regra da mão esquerda em forças magnéticas sobre cargas.
 
+http://www.ensaios3d.com/mentoring/fisica
+
 **PUC Minas - Poços de Caldas**
 
 Autores:
@@ -17,7 +19,7 @@ Orientadores:
 - Fabiano Costa Teixeira
 - João Carlos de Moraes Morselli Junior
 
------------- mudança dois
+------------ 
 
 ## Pastas ##
 
@@ -33,4 +35,3 @@ raiz:
 [ app.js - arquivo principal da aplicação ]
 [ style.css - estilos]
 
-/teste
