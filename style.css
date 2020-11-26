@@ -18,7 +18,6 @@ body {
   display: flex;
   color: white;
   justify-content: center;
-	padding-bottom: 
 }
 
 .botao1, .botao2, .botao3{
@@ -54,7 +53,6 @@ html, body, .page {
 .page {
   position: fixed;
   margin: auto;
-  padding-bottom: 500px;
 }
 
 #p1 {
@@ -165,7 +163,7 @@ a {
 }
 
 .hint {
-  font-size: 13px;
+  font-size: 18px;
 }
 
 #p4 .hint {
@@ -180,8 +178,11 @@ a {
   -o-transition: all 250ms ease-out;
 }
 
-.hint a:hover {
-  color: #FFF;
+.hint, p {
+  font-weight: lighter;
+  width: 400px;
+  position: relative;
+  left: -30px;
 }
 
 .line-trough {
@@ -189,8 +190,8 @@ a {
 }
 
 .page .icon {
-  position: absolute;
-  top: 0;
+  position: relative;
+  top: 120px;
   bottom: 0;
   right: 10%;
   left: 0;
@@ -227,4 +228,10 @@ a {
   -moz-transform: translateX(0) !important;
   -o-transform: translateX(0) !important;
   transition-delay: 1s;
+}
+
+img {
+    position: fixed;
+    width: 450px;
+    left: -34%;
 }
