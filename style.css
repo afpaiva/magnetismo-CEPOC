@@ -4,7 +4,6 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-
 #viewport{
   position: fixed;
   width: 100%;
@@ -27,11 +26,10 @@ body {
   margin: 3px;
   cursor: pointer;
 }
+
 .botao1:hover, .botao2:hover , .botao3:hover  {
   opacity: 0.5;
 }
-
-
 
 html, body, .page {
   width: 100%;
@@ -63,11 +61,11 @@ html, body, .page {
   left: 200%;
 }
 
-#p1 { background: darkslateblue; }
-#p2 { background: tomato; }
-#p3 { background: gold; }
-#p4 { background: deeppink; }
-#p5 { background: rebeccapurple; }
+#p1 { background: rgb(67, 53, 145); }
+#p2 { background: rgb(204, 82, 60); }
+#p3 { background: rgb(228, 178, 42); }
+#p4 { background: rgb(204, 34, 125); }
+#p5 { background: rgb(66, 41, 112); }
 
 #t2:target #p2,
 #t3:target #p3,
@@ -171,7 +169,7 @@ a {
 }
 
 .hint a {
-  color: yellow;
+  color: rgb(238, 176, 6);
   transition: all 250ms ease-out;
   -webkit-transition: all 250ms ease-out;
   -moz-transition: all 250ms ease-out;
@@ -180,9 +178,6 @@ a {
 
 .hint, p {
   font-weight: lighter;
-  width: 400px;
-  position: relative;
-  left: -30px;
 }
 
 .line-trough {
@@ -192,14 +187,11 @@ a {
 .page .icon {
   position: relative;
   top: 120px;
-  bottom: 0;
-  right: 10%;
-  left: 0;
   width: 270px;
   height: 170px;
   margin: auto;
+  font-size: 60px;
   text-align: center;
-  font-size: 80px;
   line-height: 1.3;
   transform: translateX(360%);
   -webkit-transform: translateX(360%);
@@ -230,8 +222,16 @@ a {
   transition-delay: 1s;
 }
 
-img {
-    position: fixed;
-    width: 450px;
-    left: -34%;
+.logos {
+    width: 200px;
+}
+
+.container{
+  overflow-y: scroll;
+  position: relative;
+  left: -5%;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  text-align: center;
 }

@@ -39,7 +39,7 @@ camera.position.set (0,0,8);
 // magnets     = objeto estático -> imãs
 var mixer, play;
 var group;
-var magnets, magnetField, hand, vector, vF, vB, vV;
+var magnets, magnetField, hand, vector, vF, vB, vV, trajetoria;
 const loader = new GLTFLoader();
 loader.load('./assets/modelo.glb',
   function (gltf){
@@ -50,12 +50,14 @@ loader.load('./assets/modelo.glb',
     vF = gltf.scene.children[4];
     vB = gltf.scene.children[5];
     vV = gltf.scene.children[6];
+    trajetoria = gltf.scene.children[7];
     group = new THREE.Group();
     group.add(vector);
     group.add(vF);
     group.add(vB);
     group.add(vV);
     group.add(hand);
+    scene.add(trajetoria);
     scene.add(magnets);
     scene.add(magnetField);
     scene.add(group);
