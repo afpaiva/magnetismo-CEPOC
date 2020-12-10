@@ -19,6 +19,7 @@
 
 	</head>
 	<body>
+		<div class="intro" onClick="hide()"><img src="./assets/splash.png"></div>
 		<div class="ct" id="t1">
 			<div class="ct" id="t2">
 				<div class="ct" id="t3">
@@ -32,25 +33,88 @@
 								<a href="#t5"><li class="icon fa fa-info" id="cinco"></li></a>
 							</ul>
 							<div class="page" id="p1">
+								<div class="tetha">
+									<img id="tetha_label" src="assets/tetha_off.png">
+									<br>
+									<input id="sld_tetha" type="range" min="0" max="3" value="0">
+								</div>
 								<div class="controllers-menu">
-									<div class="botao1"><i class="far fa-pause-circle"></i> Pausar</div>
-									<div class="botao2"><i class="fas fa-sync-alt"></i> Girar</div>
-									<div class="botao3"><i class="far fa-hand-pointer"></i> Mão</div>
+									<div class="botao1"><i class="far fa-pause-circle"></i></div>
+									<div class="botao2"><i class="fas fa-sync-alt"></i></div>
+									<div class="botao3"><i class="far fa-hand-pointer"></i> mão esquerda</div>
 								</div>
 								<div id="viewport"></div>
 							</div>
 							<div class="page" id="p2">
 								<div class="container">
 									<section class="icon fa fa-square-root-alt">
-										<span class="title">Fórmulas</span>
-										<p class="hint">Inserir lista de formulas e dicas sobre a matéria</p>
+										<span class="title">Simbologia</span>
+										<p class="hint"></p>
+										<img class="ajuda" src="./assets/screen_0.png"><br>
+										<img class="ajuda" src="./assets/screen_1.png"><br>
 									</section>
 								</div>
 							</div>  
 							<div class="page" id="p3">
 								<div class="container">
 									<section class="icon fa fa-rocket">
-										<span class="title">Provas</span>
+										<span class="title">Questões</span>
+										<span class="hint">
+										<p class="justifica">
+										<span class="title"> Questão 1:</span><br>
+										1. [MED-ITAJUBÁ]<br>
+										<br>
+										I. Uma carga elétrica submetida a um campo magnético sofre sempre a ação de uma força magnética.<br>
+										II. Uma carga elétrica submetida a um campo elétrico sofre sempre a ação de uma força elétrica.<br>
+										III. A força magnética que atua sobre uma carga elétrica em movimento dentro de um campo magnético é sempre perpendicular à velocidade da carga.<br>
+										<br>
+										Aponte abaixo a opção correta:<br>
+										<br>
+										a) Somente I está correta.<br>
+										b) Somente II está correta.<br>
+										c) Somente III está correta.<br>
+										d) II e III estão corretas.<br>
+										e) Todas estão corretas.<br>
+										<br>
+										Resposta:<br>
+										<br>
+										A afirmação I está incorreta pelo fato de a carga elétrica nem sempre sofrer ação de uma força magnética. Para uma carga elétrica lançada paralelamente as linhas de campo a força magnética será nula.<br>
+										<br>
+										A afirmação II está correta, pois cargas elétricas lançadas em campos elétricos sempre sofrem a ação de uma força elétrica.<br>
+										<br>
+										A afirmação III está correta, pois a força magnética é sempre perpendicular à velocidade da carga. Essa comprovação pode ser realizada através da regra do tapa.<br>
+										<br>
+										RESPOSTA: d)<br>
+										<br>
+										<span class="title">
+										Questão 2:</span><br>
+										<br>
+										2. [PUC]<br>
+										<br>
+										Um elétron num tubo de raios catódicos está se movendo paralelamente ao eixo do tubo com velocidade 107 m/s. Aplicando-se um campo de indução magnética de 2T, paralelo ao eixo do tubo, a força magnética que atua sobre o elétron vale:<br>
+										<br>
+										a) 3,2 . 10-12N<br>
+										b) nula<br>
+										c) 1,6 . 10-12 N<br>
+										d) 1,6 . 10-26 N<br>
+										e) 3,2 . 10-26N<br>
+										<br>
+										Resposta:<br>
+										<br>
+										Como o campo magnético é paralelo a velocidade do elétron, então o ângulo entre eles será zero. Logo, pela fórmula da força magnética, temos que seu valor também será nulo.<br>
+										<br>
+										RESPOSTA: b)<br>
+										<br>
+										Fonte: <a href="https://www.todoestudo.com.br/fisica/forca-magnetica" target="blank">https://www.todoestudo.com.br/fisica/forca-magnetica</a><br>
+										<br>
+										Vídeos sobre resoluções de exercícios:<br>
+										<br>
+										<a href="https://www.youtube.com/watch?v=XieWEpsu5ZQ" target="blank">https://www.youtube.com/watch?v=XieWEpsu5ZQ</a><br>
+										<br>
+										<a href="https://www.youtube.com/watch?v=qgGiDKQxm7Q" target="blank">https://www.youtube.com/watch?v=qgGiDKQxm7Q</a><br>
+										<br>
+										</p>
+										</span>
 									</section>
 								</div>
 							</div>
@@ -58,7 +122,17 @@
 								<div class="container">
 									<section class="icon fa fa-question">
 										<span class="title">Ajuda</span>
-										<p class="hint">Inserir texto de ajuda ao usuário</a></p>
+										<p class="hint">Controles da tela inicial</a></p>
+										<br>
+										<img class="ajuda" src="./assets/cont_0.png">
+										<br>
+										<img class="ajuda" src="./assets/cont_1.png">
+										<p class="hint">Mouse</a></p>
+										<br>
+										<img class="ajuda" src="./assets/cont_2.png">
+										<p class="hint">Touch</a></p>
+										<br>
+										<img class="ajuda" src="./assets/cont_3.png">
 									</section>
 								</div>
 							</div> 
@@ -70,23 +144,32 @@
 											<p>
 												Trabalho de representação interativa e tridimensional
 												da regra da mão esquerda em forças magnéticas sobre cargas.
+												Desenvolvido para o auxílio no entendimento espacial da
+												ação de forças magnéticas sobre cargas em movimento.
 											</p>
-											<p>Autores:
+											<p>
+												Uma parceiria entre a Pontifícia Universidade Católica
+												de Minas Gerais e o Colégio CEPOC de Poços de Caldas.
+											</p>
+											<p>
+												<span class="title"> Autores:</span>
 												<br> André Fonseca de Paiva 
 												<br> Angelica dos Santos 
 												<br> Fernando Thales Pereira 
 												<br> João Victor Zanolli Crespo 
 												<br> Thiago Junio Saraiva
 											</p>
-											<p>Orientadores: 
-												<br> Fabiano Costa Teixeira 
-												<br> João Carlos de Moraes Morselli Junior
+											<p>
+												<span class="title">Orientadores:</span> 
+												<br> Prof. Fabiano Costa Teixeira 
+												<br> Prof. João Carlos de Moraes Morselli Junior
+												<br> Prof. Rodrigo
 												<br>
 												<br>
 												<img class="logos" src="assets/logos.png">
 												<br>
 												<br>
-												<br>
+												<br>Última atualização: 10/12/2020
 											</p>
 										</span>
 									</section>
@@ -116,6 +199,12 @@
 
 		<script src="tools/gsap.min.js">
 		// Inclui API para criação de interpolação de valores
+		</script>
+
+		<script>
+			function hide(){
+				document.querySelector(".intro").style.height = "0";
+			}
 		</script>
 
 	</body>

@@ -3,6 +3,22 @@ body {
   overflow: hidden;
   font-family: 'Roboto', sans-serif;
 }
+.ajuda{
+  width: 380px;
+}
+
+.intro{
+  overflow: hidden;
+  position: absolute;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.774);
+  width: 100vw;
+  height: 100vh;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 #viewport{
   position: fixed;
@@ -63,9 +79,9 @@ html, body, .page {
 
 #p1 { background: rgb(67, 53, 145); }
 #p2 { background: rgb(204, 82, 60); }
-#p3 { background: rgb(228, 178, 42); }
-#p4 { background: rgb(204, 34, 125); }
-#p5 { background: rgb(66, 41, 112); }
+#p3 { background: rgb(78, 69, 74); }
+#p4 { background: rgb(66, 41, 112); }
+#p5 { background: rgb(228, 178, 42); }
 
 #t2:target #p2,
 #t3:target #p3,
@@ -234,4 +250,34 @@ a {
   height: 100%;
   margin: auto;
   text-align: center;
+}
+
+.tetha{
+  z-index: 3;
+  position: fixed;
+  bottom: 50px;
+  left: -150px;
+  margin-left: 50%;
+}
+#sld_tetha{
+  -webkit-appearance: none;
+  outline: none;
+  width: 300px;
+  height: 10px;
+  background: rgb(150, 140, 168);
+  border-radius: 5px;
+  cursor: pointer;
+}
+#sld_tetha::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 25px;
+  height: 25px;
+  background: yellow;
+  border-radius: 25px;
+  transition: .3;
+}
+
+.justifica{
+  width: 350px;
+  text-align: justify;
 }
