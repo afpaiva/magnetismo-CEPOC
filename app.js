@@ -157,19 +157,19 @@ function onClickOpacity(){
     case 0:
       group_hand.children[0].visible = true;//hand
       group_hand.children[1].visible = true;//arrows
-      document.querySelector(".botao3").innerHTML = "<i class=\"far fa-hand-pointer\"></i> vetor + mão";
+      document.querySelector(".botao3").innerHTML = "<i class=\"fa-hand-point-left\"></i> vetor + mão";
       break;
 
     case 1:
       group_hand.children[0].visible = false;//hand
       group_hand.children[1].visible = true;//arrows
-      document.querySelector(".botao3").innerHTML = "<i class=\"far fa-hand-pointer\"></i> vetor";
+      document.querySelector(".botao3").innerHTML = "<i class=\"fa-hand-point-left\"></i> vetor";
       break;
       
     case 2:
       group_hand.children[0].visible = true;//hand
       group_hand.children[1].visible = false;//arrows
-      document.querySelector(".botao3").innerHTML = "<i class=\"far fa-hand-pointer\"></i> mão esquerda";
+      document.querySelector(".botao3").innerHTML = "<i class=\"fa-hand-point-left\"></i> mão esquerda";
       break;
   }
   console.log(b);
