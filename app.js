@@ -91,15 +91,14 @@ loader.load('./assets/modelo.glb',
     mixer_tetha_dif = new THREE.AnimationMixer(tetha_dif);
     mixer_tetha_90 = new THREE.AnimationMixer(tetha_90);
     mixer_tetha_0_180 = new THREE.AnimationMixer(tetha_0_180);
-
-    action_field = mixer_field.clipAction(gltf.animations[6]);
-    action_tetha_dif = mixer_tetha_dif.clipAction(gltf.animations[0]);
-    action_tetha_90 = mixer_tetha_90.clipAction(gltf.animations[2]);
-    action_tetha_0_180 = mixer_tetha_0_180.clipAction(gltf.animations[4]);
+    
     console.log(gltf.animations);
-
+    action_field = mixer_field.clipAction(gltf.animations[3]);
+    action_tetha_dif = mixer_tetha_dif.clipAction(gltf.animations[0]);
+    action_tetha_90 = mixer_tetha_90.clipAction(gltf.animations[1]);
+    action_tetha_0_180 = mixer_tetha_0_180.clipAction(gltf.animations[2]);
+  
     action_field.play();
-
 
   }),
   undefined,
