@@ -17,10 +17,20 @@ body {
   .ajuda{
     width: 400px;
   }
+
+  .justifica{
+    width: 600px;
+    text-align: justify;
+  }
 }
 @media screen and (max-width: 700px) {
   .ajuda{
     width: 280px;
+  }
+
+  .justifica{
+    width: 250px;
+    text-align: justify;
   }
 }
 .intro{
@@ -93,11 +103,11 @@ html, body, .page {
   left: 200%;
 }
 
-#p1 { background: rgb(67, 53, 145); }
-#p2 { background: rgb(204, 82, 60); }
-#p3 { background: rgb(78, 69, 74); }
-#p4 { background: rgb(66, 41, 112); }
-#p5 { background: rgb(228, 178, 42); }
+#p1 { background: #3E44B5; }
+#p2 { background: #319AC4; }
+#p3 { background: #3E75CF; }
+#p4 { background: #2EB8B1; }
+#p5 { background: #5E43A1; }
 
 #t2:target #p2,
 #t3:target #p3,
@@ -291,9 +301,4 @@ a {
   background: yellow;
   border-radius: 25px;
   transition: .3;
-}
-
-.justifica{
-  width: 250px;
-  text-align: justify;
 }
