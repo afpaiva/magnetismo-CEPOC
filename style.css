@@ -3,10 +3,26 @@ body {
   overflow: hidden;
   font-family: 'Roboto', sans-serif;
 }
-.ajuda{
-  width: 380px;
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
+@media screen and (min-width: 701px) {
+  .ajuda{
+    width: 400px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .ajuda{
+    width: 280px;
+  }
+}
 .intro{
   overflow: hidden;
   position: absolute;
