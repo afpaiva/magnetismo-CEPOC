@@ -3,7 +3,7 @@
 
 Trabalho de representação interativa e tridimensional da regra da mão esquerda em forças magnéticas sobre cargas.
 
-http://www.ensaios3d.com/mentoring/fisica
+https://afpaiva.github.io/magnetismo-CEPOC/
 
 **PUC Minas - Poços de Caldas**
 
